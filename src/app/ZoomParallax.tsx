@@ -98,7 +98,7 @@ function ZoomParallax({ src }: Props) {
     <div ref={ref} className='h-[300vh]  '>
         <div className='h-[100vh] sticky top-0 overflow-hidden'>
             {image.map((item, index) => (
-                <motion.div style={{scale: item.scale }} className='absolute w-full h-full flex items-center justify-center '>
+                <motion.div style={{scale: item.scale }} key={index} className='absolute w-full h-full flex items-center justify-center '>
                     <div style={{top:item.top, width:item.width, height:item.height, left:item.left}} className='relative w-[25vw] h-[25vh]'  key={index}>
                     <Image src={item.src} layout="fill" objectFit="cover" alt={`this is ${index}`}/>
                     </div>
